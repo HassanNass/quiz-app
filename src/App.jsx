@@ -11,17 +11,32 @@ function App() {
 
   function handleAnswer(selecteAnswer) {
     setAnswer(selecteAnswer);
-    if (answer === questions[questionId].correctAnswer){
+    if (selecteAnswer === questions[questionId].correctAnswer){
       setScore(score + 1);
+    }
+  }
+
+  function handleNext() {
+    if (questionId === questions.length - 1) {
+      setIsFinished(true);
+    }
+    else {
+      setQuestionId(questionId + 1);
+      setAnswer("");
     }
   }
 
   return(
     <div className="container">
       <h1 className="header">Quiz App</h1>
-      <Question question={questions[questionId]}
-                onAnswer={handleAnswer}
-      />
+      {isFinished ? <div>{score}/5</div>
+                  : <div>
+                      <Question question={questions[questionId]}
+                                onAnswer={handleAnswer}/>
+                      {answer && <button className="btn-next"
+                                         onClick={() => handleNext()}
+                                 >Next</button>}
+                    </div>}
     </div>
   )
 }
