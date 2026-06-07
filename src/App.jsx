@@ -2,6 +2,7 @@ import "./App.css"
 import questions from "./questions"
 import { useState } from "react";
 import Question from "./Question.jsx"
+import Results from "./Results.jsx"
 
 function App() {
   const [questionId, setQuestionId] = useState(0);
@@ -26,10 +27,19 @@ function App() {
     }
   }
 
+  function handleRestart() {
+    setQuestionId(0);
+    setAnswer("");
+    setScore(0);
+    setIsFinished(false);
+  }
+
   return(
     <div className="container">
       <h1 className="header">Quiz App</h1>
-      {isFinished ? <div>{score}/5</div>
+      {isFinished ? <Results onRestart={handleRestart}
+                             score={score}
+                             total={questions.length}/>
                   : <div>
                       <Question question={questions[questionId]}
                                 onAnswer={handleAnswer}/>
