@@ -1,16 +1,69 @@
-# React + Vite
+# Quiz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based Quiz Application that allows users to answer multiple-choice questions and receive a final score upon completion. Users can select answers, receive immediate visual feedback indicating whether their selection was correct or incorrect, navigate through the quiz question by question, and restart the quiz once it is finished.
 
-Currently, two official plugins are available:
+## What I Learned
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Through this project, I strengthened my understanding of React state management using the `useState` hook. I gained practical experience managing application state across multiple components, handling user interactions, and implementing conditional rendering to display different views based on the application's state.
 
-## React Compiler
+Additionally, I improved my ability to pass data and functions between parent and child components using props, allowing components to communicate effectively while remaining reusable and maintainable.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Key Concepts Practiced
 
-## Expanding the ESLint configuration
+* Managing state with the `useState` hook
+* Breaking the application into reusable components
+* Passing data down through props
+* Passing functions through props to handle child component events
+* Conditional rendering
+* Conditional CSS classes
+* Rendering lists using `.map()`
+* Handling button events and user interactions
+* Disabling elements based on application state
+* Implementing quiz logic and score tracking
+* Resetting application state to restart the quiz
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+* Multiple-choice quiz questions
+* Instant feedback on selected answers
+* Score tracking throughout the quiz
+* Progress indicator showing the current question number
+* Final results screen displaying the user's score
+* Restart functionality to retake the quiz
+* Responsive and interactive user interface
+
+## Technologies Used
+
+* React
+* JavaScript (ES6+)
+* CSS3
+* Vite
+* React Hooks (`useState`)
+* Git & GitHub
+
+## Prerequisites
+
+* Node.js (version 18 or later recommended)
+* npm (included with Node.js)
+
+## How to Run It Locally
+
+To run this project on your local machine:
+
+1. Clone the repository:
+
+   git clone https://github.com/HassanNass/quiz-app.git
+
+2. Navigate to the project directory:
+
+   cd quiz-app
+
+3. Install dependencies:
+
+   npm install
+
+4. Start the development server:
+
+   npm run dev
+
+5. Open your browser and visit the URL displayed in the terminal (typically http://localhost:5173 for Vite projects).
