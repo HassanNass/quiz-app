@@ -11,6 +11,7 @@ function Question({ question, onAnswer, answer, correctAnswer }) {
 										  : "btn-answer"}
 						key={index}
 						onClick={() => onAnswer(option)}
+						disabled={answer}
 				>{option}</button>
 			))}
 		</div>
