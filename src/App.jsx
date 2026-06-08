@@ -41,8 +41,11 @@ function App() {
                              score={score}
                              total={questions.length}/>
                   : <div>
+                      <h3>Question {questionId + 1} of {questions.length}</h3>
                       <Question question={questions[questionId]}
-                                onAnswer={handleAnswer}/>
+                                onAnswer={handleAnswer}
+                                answer={answer}
+                                correctAnswer={questions[questionId].correctAnswer}/>
                       {answer && <button className="btn-next"
                                          onClick={() => handleNext()}
                                  >Next</button>}
